@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Let vs Const</title>
+  </head>
+  <body>
+    <script>
+      const key = 'abc1234'; //const cannot be updated
+      let points = 50;
+      let winner = false;
+
+      let points = 60; //it would give error bcs let cant be redeclare 
+
+      if(points > 40) {
+        let winner = true; //this will run, but for this block only
+      }
+
+      console.log(winner); //if we call winner here, the one will show up is winner on top line after points, because its  outside block scope
+      
+      const person = {
+        name: "Wes",
+        age: 28
+      }
+
+      it cant be reassigned with this way : person = {name: Wesley}
+      but it can be reassigne with this way : person.age = 29;
+      we can make it cant be changed forever by doing this : 
+      
+      const wes = Object.freeze(person);
+
+      so when we called 'wes.age = 30' to update, it wont change, wes still had age = 28
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>let and const</title>
+  </head>
+  <body>
+    <script>
+      var width = 100; 
+      console.log(width);
+      var width = 200; //var can be updated and assigned with other value (redefine)
+      //var is a globally scope , can be put in outer or inside function 
+      //var is a function scope
+      console.log(width);
+      
+      let height = 200;
+      const key = 'abc123';
+    </script>
+  </body>
+</html>
+
+<script>
+  //other example
+  function setWidth() {
+    var width = 100;
+    console.log(width);
+  }
+  setWidth();
+  console.log(width); //cant be called, bcs its scope only for setwidth function
+</script>
+
+<script>
+  //when use var
+  var age = 100;
+
+  if (age>12){
+    var dogYears = age * 7;
+    console.log('You are ${dogYears} dog years old!')
+  }
+>> when we called dogYears in console, it show the result (console.log)
+</script>
+
+<script>
+    //when use let
+    var age = 100;
+  
+    if (age>12){
+      let dogYears = age * 7;
+      console.log('You are ${dogYears} dog years old!')
+    }
+  >> when we called dogYears in console, it wont show the result (console.log) because it can be called only inside if case
+  >> let and const are block scope, not global scope so it wont work if we called them outside its scope
+  </script>

@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>let and const</title>
+  </head>
+  <body>
+    <script>
+      var name = 'Wes'; 
+      when we call 'name' in console, it will show 'Wes'
+
+      (function(){
+        var name = 'Wes';
+        //when we call 'name' in console, it will show "" (empty), because its inside a function
+      })();
+      
+    </script>
+  </body>
+</html>
+
+<script>
+  const name = 'Wes';
+  wen we call 'name' in console, it will show 'Wes', 
+  but if we do this : 
+  {
+    const name = "Wes";
+    //we cant call name in console
+  }
+</script>
+
+
+<script>
+
+    for(var i = 0; i < 10; i++){
+      console.log(i);
+      setTimeout(function(){
+        console.log('The number is ' + i);
+      }, 1000);
+    }
+    //output : THe number is 10 > nunggu 1detik dulu
+
+    for(let i = 0; i < 10; i++){
+      console.log(i);
+      setTimeout(function(){
+        console.log('The number is ' + i);
+      }, 1000);
+    }
+    //output : THe number is 0 > repeat sampe the number is 10
+    
+    for(const i = 0; i < 10; i++){
+      console.log(i);
+      setTimeout(function(){
+        console.log('The number is ' + i);
+      }, 1000);
+    }
+    //output : uncaught assignment to const
+</script>
+
+<script>
+ 
+</script>

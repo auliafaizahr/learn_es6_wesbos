@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Let vs Const</title>
+  </head>
+  <body>
+    <script>
+      var pizza = 'Deep Dish 🍕🍕🍕🍕 ';
+      console.log(pizza);
+
+      if we make it like this, 
+        console.log(pizza); 
+        var pizza = 'Deep Dish 🍕🍕🍕🍕 ';
+      then in console will show : undefined
+
+      if we make it like this, 
+        console.log(pizza); 
+        const pizza = 'Deep Dish 🍕🍕🍕🍕 ';
+      then in console will show : uncaught reference error, pizza is not defined
+    </script>
+  </body>
+</html>
